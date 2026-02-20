@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pasaka Rievan Smit | Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Container Utama */
+        .expertise-orbit {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            aspect-ratio: 1 / 1;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Teks Tengah */
+        .center-label {
+            text-align: center;
+            z-index: 10;
+            padding: 20px;
+        }
+
+        /* Item Ikon */
+        .expertise-item {
+            position: absolute;
+            width: 100px;
+            text-align: center;
+            transition: all 0.5s ease;
+        }
+
+        /* Garis Penghubung (Background Lines) */
+        .expertise-bg-lines {
+            position: absolute;
+            inset: 0;
+            opacity: 0.1;
+            background-image: radial-gradient(circle, #2c3e50 1px, transparent 1px);
+            background-size: 50px 50px;
+            /* Tambahkan gambar spiral/garis dari aset jika ada */
+        }
+
+        /* Efek Hover Ikon */
+        .expertise-item .icon-circle {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: #2c3e50;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 10px;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: all 0.4s ease;
+        }
+
+        .expertise-item:hover .icon-circle {
+            cursor: pointer;
+            
+            transform: scale(1.2);
+            box-shadow: 0 0 20px rgba(255,255,255,0.2);
+        }
+
+        .expertise-item:hover .icon-circle svg {
+            color: black;
+        }
+
+        .expertise-item p {
+            font-size: 9px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #94a3b8;
+        }
+    </style>
+</head>
+<body class="bg-white">
+    
+        <nav class="absolute top-0 w-full p-6 px-8 flex justify-between items-center z-50 transition-all duration-300">
+            <a href="index.html" class="z-[60]">
+                <div class="text-2xl md:text-3xl font-extralight tracking-[0.2em] uppercase leading-tight text-white">
+                    <span class="font-extrabold">P</span>asaka<br> 
+                    <span class="font-extrabold">R</span>ievan<br> 
+                    <span class="font-extrabold">S</span>mith<br>
+                    <span class="block text-[10px] leading-none tracking-[0.3em] mt-1">
+                        Counsellors at <span class="font-semibold">Law</span>
+                    </span>
+                </div>
+            </a>
+            
+            <ul class="hidden md:flex space-x-10 text-[10px] uppercase tracking-[0.3em] font-light text-white">
+                
+                <a href="about-us.html"><li class="nav-link pb-1 cursor-pointer hover:text-gray-300 transition-colors">The Firm</li></a>
+                <a href="profesionals.html"><li class="nav-link pb-1 cursor-pointer hover:text-gray-300 transition-colors">Professionals</li></a>
+                <a href="practice-area.html"><li class="nav-link pb-1 cursor-pointer hover:text-gray-300 transition-colors">Area of Expertise</li></a>
+                <a href="newsroom.html"><li class="nav-link pb-1 cursor-pointer hover:text-gray-300 transition-colors">Insights</li></a>
+                <a href="#"><li class="nav-link pb-1 cursor-pointer hover:text-gray-300 transition-colors">Reach Us</li></a>
+                <a href="#"><li class="nav-link pb-1 cursor-pointer hover:text-gray-300 transition-colors">Join Us</li></a>
+                <div class="flex items-center pb-1 gap-2 text-white/60">
+                        <i data-lucide="globe" class="w-3 h-3 text-[#C9A24D]"></i>
+                        <div class="flex gap-2 text-[10px] font-bold tracking-widest">
+                            <button class="text-white hover:text-[#C9A24D] transition-colors" id="lang-en">EN</button>
+                            <!-- <span class="text-white/20">|</span> -->
+                            <!-- <button class="text-white/40 hover:text-white transition-colors" id="lang-id">ID</button> -->
+                        </div>
+                    </div>
+            </ul>
+
+            <button id="menuBtn" class="md:hidden z-[60] flex flex-col justify-between h-5 w-6 outline-none">
+                <span class="block h-0.5 w-full bg-white transition-all duration-300 origin-left" id="line1"></span>
+                <span class="block h-0.5 w-full bg-white transition-all duration-300" id="line2"></span>
+                <span class="block h-0.5 w-full bg-white transition-all duration-300 origin-left" id="line3"></span>
+            </button>
+
+            <div id="mobileMenu" class="fixed inset-0 bg-[#000] z-[55] flex flex-col items-center justify-center translate-x-full transition-transform duration-500 ease-in-out">
+                <ul class="flex flex-col space-y-8 text-center text-sm uppercase tracking-[0.4em] font-light text-white">
+                    
+                    <a href="about-us.html" class="hover:text-gray-300 transition-colors">About us</a>
+                    <a href="profesionals.html" class="hover:text-gray-300 transition-colors">Professionals</a>
+                    <a href="practice-area.html" class="hover:text-gray-300 transition-colors">Practices</a>
+                    <a href="newsroom.html" class="hover:text-gray-300 transition-colors">Article</a>
+                    <a href="#" class="hover:text-gray-300 transition-colors">Contact us</a>
+                    <a href="#" class="hover:text-gray-300 transition-colors">Carrers</a>
+                </ul>
+                
+                <div class="absolute bottom-12 flex space-x-6">
+                    <div class="h-[1px] w-8 bg-white/20 self-center"></div>
+                    <p class="text-[9px] text-gray-500 tracking-widest uppercase">PRS Law Firm</p>
+                    <div class="h-[1px] w-8 bg-white/20 self-center"></div>
+                </div>
+            </div>
+        </nav>
+
+    <section class="hero-wrapper flex items-center justify-center">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop" 
+                id="heroImage" 
+                class="parallax-hero-img opacity-80" 
+                alt="Landscape Indonesia">
+            <div class="absolute inset-0 bg-gradient-to-b from-[#344C64]/50 via-transparent to-[#344C64]"></div>
+            <div class="absolute inset-0 bg-[#344C64]/20"></div>
+        </div>
+
+        <div class="relative z-10 text-center px-6 mt-48" data-aos="fade-up">
+            
+            <h1 class="serif text-5xl md:text-6xl lg:text-7xl italic leading-tight text-white">
+                Trusted Expertise <br>
+                <span class="text-gray-300">Consistent Excellence</span>
+            </h1>
+
+
+            <div class="mt-12 flex flex-col items-center">
+                <div class="w-[1px] h-20 bg-gradient-to-b from-white to-transparent mb-6 animate-bounce"></div>
+                <p class="uppercase tracking-[0.5em] text-[10px] font-extralight text-gray-400">Scroll to Explore</p>
+            </div>
+        </div>
+    </section>
+
+
+    <section class=" py-32 px-8 flex items-center justify-center">
+        <div class="max-w-4xl mx-auto text-center">
+            
+            <div data-aos="fade-up" data-aos-duration="1000">
+                <h2 class="serif text-4xl md:text-6xl lg:text-7xl italic leading-tight  mb-10">
+                    Driven by Law<br class="hidden md:block"> 
+                    <span class="text-gray-400">Defined by Excellence</span>
+                </h2>
+            </div>
+
+            <div class="max-w-2xl mx-auto mb-12" data-aos="fade-up" data-aos-delay="200">
+                <p class="text-gray-500 font-light leading-relaxed text-base md:text-lg">
+                    PASAKA RIEVAN SMIT is a full-service law firm driven by integrity, precision, and strategic excellence. We deliver integrated legal solutions across diverse practice areas, ensuring every client receives exceptional representation tailored to their unique needs
+                </p>
+            </div>
+
+            <div data-aos="fade-up" data-aos-delay="400">
+                <a href="#" class="inline-flex flex-col items-center group">
+                    <span class=" text-xs uppercase tracking-[0.4em] font-bold mb-3 transition-colors group-hover:text-blue-firm">
+                        Learn How We Can Help
+                    </span>
+                    <div class="relative w-24 h-[1px] bg-gray-800 overflow-hidden">
+                        <div class="absolute inset-0 bg-blue-firm translate-x-[-100%] group-hover:translate-x-[0%] transition-transform duration-500 ease-in-out"></div>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="quote-parallax-wrapper">
+        <div class="absolute inset-0 z-0">
+            <img src="https://plus.unsplash.com/premium_photo-1694476607274-003dd175d073?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?q=80&w=2000" 
+                id="quoteImage" 
+                class="parallax-quote-img opacity-90" 
+                alt="Philosophy Background">
+            
+            <div class="absolute inset-0 bg-gradient-to-b from-[#344C64]/50 via-transparent to-[#344C64]"></div>
+            
+            <div class="absolute inset-0 bg-[#344C64]/50"></div>
+        </div>
+
+        <div class="relative z-10 text-center px-6 max-w-4xl" data-aos="fade-up">
+            <div class="w-16 h-[1px] bg-[#2c3e50] mx-auto mb-8"></div>
+            <h2 class="serif text-3xl md:text-5xl text-white italic leading-tight opacity-95">
+                Law Tailored to You. Satisfaction Crafted by Us.
+            </h2>
+            <p class="mt-6  text-gray-400 tracking-[0.5em] text-[10px] font-bold uppercase">The Firm's Core Philosophy</p>
+        </div>
+    </div>
+
+    <section class="pt-16 pb-24 px-8">
+        <div class="max-w-7xl mx-auto border-t border-white/10 pt-20">
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                
+                <div class="lg:col-span-7" data-aos="fade-right">
+
+                    <h2 class="serif text-4xl md:text-6xl lg:text-7xl italic leading-[1.1] tracking-tight">
+                        Solving <span class="text-gray-400">Law</span><br>
+                        Serving <span class="text-gray-400">You</span>
+                    </h2>
+                </div>
+
+                <div class="lg:col-span-5 lg:pt-4" data-aos="fade-left" data-aos-delay="200">
+                    <div class="space-y-8">
+                        <p class="text-gray-500 font-light leading-relaxed text-base md:text-lg">
+                            We provide practical, strategic, and client-focused legal solutions designed to resolve complex challenges with clarity and confidence. Your goals become our priority — and your protection, our commitment.
+                        </p>
+                        
+                        <div class="pt-2">
+                            <a href="#practice-areas" class="group relative inline-block">
+                                <span class="text-sm font-bold tracking-[0.3em] uppercase transition-colors group-hover:text-blue-firm">
+                                    Explore Our Practice Areas
+                                </span>
+                                <div class="mt-2 w-full h-[1px] bg-gray-800 overflow-hidden">
+                                    <div class="w-full h-full bg-blue-firm translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500 ease-in-out"></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- <section class=" overflow-hidden">
+        <div class="max-w-7xl mx-auto px-8">
+            
+            <div class="expertise-orbit" data-aos="zoom-in">
+                <div class="expertise-bg-lines"></div>
+
+                <div class="center-label">
+                    <h2 class="serif italic text-gray-500 text-2xl uppercase tracking-[0.3em]">Area of</h2>
+                    <h3 class="text-white text-4xl font-bold tracking-widest mt-2">EXPERTISE</h3>
+                </div>
+
+                <div class="expertise-item" style="transform: translateY(-220px);">
+                    <div class="icon-circle">
+                        <i class="fas fa-university text-white"></i>
+                    </div>
+                    <p>Banking & Finance</p>
+                </div>
+
+                <div class="expertise-item" style="transform: translate(180px, -130px);">
+                    <div class="icon-circle">
+                        <i class="fas fa-globe text-white"></i>
+                    </div>
+                    <p>Capital Market</p>
+                </div>
+
+                <div class="expertise-item" style="transform: translateX(220px);">
+                    <div class="icon-circle">
+                        <i class="fas fa-users text-white"></i>
+                    </div>
+                    <p>Employment</p>
+                </div>
+
+                <div class="expertise-item" style="transform: translate(180px, 130px);">
+                    <div class="icon-circle">
+                        <i class="fas fa-building text-white"></i>
+                    </div>
+                    <p>Government Related</p>
+                </div>
+
+                <div class="expertise-item" style="transform: translateY(220px);">
+                    <div class="icon-circle">
+                        <i class="fas fa-home text-white"></i>
+                    </div>
+                    <p>Real Estate</p>
+                </div>
+
+                <div class="expertise-item" style="transform: translate(-180px, 130px);">
+                    <div class="icon-circle">
+                        <i class="fas fa-hand-holding-usd text-white"></i>
+                    </div>
+                    <p>Private Wealth</p>
+                </div>
+
+                <div class="expertise-item" style="transform: translateX(-220px);">
+                    <div class="icon-circle">
+                        <i class="fas fa-gavel text-white"></i>
+                    </div>
+                    <p>Dispute Resolution</p>
+                </div>
+
+                <div class="expertise-item" style="transform: translate(-180px, -130px);">
+                    <div class="icon-circle">
+                        <i class="fas fa-file-contract text-white"></i>
+                    </div>
+                    <p>Commercial Contracts</p>
+                </div>
+            </div>
+
+        </div>
+    </section> -->
+
+
+    <section class="pb-20 px-8" id="practice-areas">
+        <div class="flex flex-col md:flex-row h-[500px] md:h-[400px] w-full max-w-7xl mx-auto overflow-hidden rounded-sm group">
+            
+            <div class="relative flex-1 hover:flex-[2.5] transition-all duration-700 ease-in-out overflow-hidden border-r border-white/10 cursor-pointer group/item">
+                <img src="https://plus.unsplash.com/premium_photo-1661301075857-63868ae88c00?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?q=80&w=2000" class="absolute inset-0 h-full w-full object-cover group-hover/item:grayscale-0 group-hover/item:scale-105 transition-all duration-700" alt="General Corporate">
+                <div class="absolute inset-0 bg-[#344C64]/60 group-hover/item:bg-[#344C64]/20 transition-all duration-700"></div>
+                
+                <div class="absolute inset-0 flex flex-col justify-end p-8 z-10">
+                    <h3 class="serif text-2xl md:text-3xl text-white italic leading-tight mb-4 transform translate-y-0 md:group-hover/item:-translate-y-4 transition-transform duration-500">
+                        Banking & <br> Finance
+                    </h3>
+                    <a href="#" class="opacity-0 group-hover/item:opacity-100 transition-opacity duration-500 text-xs uppercase tracking-[0.3em] text-white border-b border-white/30 pb-1 w-fit">Learn More</a>
+                </div>
+            </div>
+
+            <div class="relative flex-1 hover:flex-[2.5] transition-all duration-700 ease-in-out overflow-hidden border-r border-white/10 cursor-pointer group/item">
+                <img src="https://plus.unsplash.com/premium_photo-1681487769650-a0c3fbaed85a?q=80&w=1255&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?q=80&w=2000" class="absolute inset-0 h-full w-full object-cover  group-hover/item:grayscale-0 group-hover/item:scale-105 transition-all duration-700" alt="Mergers & Acquisitions">
+                <div class="absolute inset-0 bg-[#344C64]/60 group-hover/item:bg-[#344C64]/20 transition-all duration-700"></div>
+                
+                <div class="absolute inset-0 flex flex-col justify-end p-8 z-10">
+                    <h3 class="serif text-2xl md:text-3xl text-white italic leading-tight mb-4 transform translate-y-0 md:group-hover/item:-translate-y-4 transition-transform duration-500">
+                        Capital Markets & <br> Securities
+                    </h3>
+                    <a href="#" class="opacity-0 group-hover/item:opacity-100 transition-opacity duration-500 text-xs uppercase tracking-[0.3em] text-white border-b border-white/30 pb-1 w-fit">Learn More</a>
+                </div>
+            </div>
+
+            <div class="relative flex-1 hover:flex-[2.5] transition-all duration-700 ease-in-out overflow-hidden border-r border-white/10 cursor-pointer group/item">
+                <img src="https://plus.unsplash.com/premium_photo-1661559046208-0cef1cbf7b0b?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?q=80&w=2000" class="absolute inset-0 h-full w-full object-cover  group-hover/item:grayscale-0 group-hover/item:scale-105 transition-all duration-700" alt="Bankruptcy">
+                <div class="absolute inset-0 bg-[#344C64]/60 group-hover/item:bg-[#344C64]/20 transition-all duration-700"></div>
+                
+                <div class="absolute inset-0 flex flex-col justify-end p-8 z-10">
+                    <h3 class="serif text-2xl md:text-3xl text-white italic leading-tight mb-4 transform translate-y-0 md:group-hover/item:-translate-y-4 transition-transform duration-500">
+                        Commercial <br> Contracts
+                    </h3>
+                    <a href="#" class="opacity-0 group-hover/item:opacity-100 transition-opacity duration-500 text-xs uppercase tracking-[0.3em] text-white border-b border-white/30 pb-1 w-fit">Learn More</a>
+                </div>
+            </div>
+
+            <div class="relative flex-1 hover:flex-[2.5] transition-all duration-700 ease-in-out overflow-hidden cursor-pointer group/item">
+                <img src="https://images.unsplash.com/photo-1764547167506-2dbd358a5d82?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?q=80&w=2000" class="absolute inset-0 h-full w-full object-cover  group-hover/item:grayscale-0 group-hover/item:scale-105 transition-all duration-700" alt="Dispute Resolution">
+                <div class="absolute inset-0 bg-[#344C64]/60 group-hover/item:bg-[#344C64]/20 transition-all duration-700"></div>
+                
+                <div class="absolute inset-0 flex flex-col justify-end p-8 z-10">
+                    <h3 class="serif text-2xl md:text-3xl text-white italic leading-tight mb-4 transform translate-y-0 md:group-hover/item:-translate-y-4 transition-transform duration-500">
+                        Private <br> Wealth
+                    </h3>
+                    <a href="#" class="opacity-0 group-hover/item:opacity-100 transition-opacity duration-500 text-xs uppercase tracking-[0.3em] text-white border-b border-white/30 pb-1 w-fit">Learn More</a>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    
+    <!-- gambar berjalan -->
+    <section class="py-24 overflow-hidden mx-auto px-4 md:px-8">
+            <div class="swiper mySwiper relative !px-0  h-[450px] md:h-[500px] overflow-hidden rounded-sm shadow-2xl">
+
+                <div class="swiper-wrapper">
+                    
+                    <div class="swiper-slide relative h-[200px] md:h-[200px] bg-gray-900 overflow-hidden">
+                        <img src="https://plus.unsplash.com/premium_photo-1661397084763-7f70f7c10eea?q=80&w=1400&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="absolute inset-0 w-full h-full object-cover opacity-40">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#344C64] via-[#344C64]/60 to-transparent z-10"></div>
+                        
+                        <div class="absolute inset-0 flex items-center justify-center z-20 px-8 md:px-24">
+                            <div class="max-w-3xl text-center" data-aos="fade-up">
+                                
+                                <h3 class="serif text-3xl md:text-4xl text-white mb-6">
+                                    Personalized and Professional Approach
+                                </h3>
+
+                                <p class="text-gray-300 text-lg leading-relaxed font-light">
+                                    Tailoring our legal strategies to meet the unique needs of every client with the highest level of professionalism.
+                                </p>
+                                
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="swiper-slide relative h-[200px] md:h-[200px] bg-gray-900 overflow-hidden">
+                        <img src="https://plus.unsplash.com/premium_photo-1664297541020-d80c7c8b0c1a?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?q=80&w=2000" class="absolute inset-0 w-full h-full object-cover opacity-40">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#344C64] via-[#344C64]/60 to-transparent z-10"></div>
+
+                        <div class="absolute inset-0 flex items-center justify-center z-20 px-8 md:px-24">
+                            <div class="max-w-3xl text-center" data-aos="fade-up">
+                                
+                                <h3 class="serif text-3xl md:text-4xl text-white mb-6">
+                                    Commitment to Long-Term Relationships
+                                </h3>
+
+                                <p class="text-gray-300 text-lg leading-relaxed font-light">
+                                    We don't just provide one-time solutions; we aim to be your trusted legal partner for years to come.
+                                </p>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                
+            </div>
+
+            
+    </section>
+
+
+    
+
+
+
+    <section class="py-32 px-8 border-t border-white/10">
+        <div class="max-w-7xl mx-auto">
+            
+            <div class="flex justify-between items-end mb-16" data-aos="fade-up">
+                <div>
+                    <h2 class="serif text-5xl md:text-6xl  italic">Latest News</h2>
+                    <div class="w-20 h-[1px] bg-blue-firm mt-6"></div>
+                </div>
+                <a href="newsroom.html" class="text-xs uppercase tracking-[0.3em] text-gray-500 hover:text-primary border-b border-gray-800 pb-1 transition-all">
+                    Visit our Newsroom —
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                
+                <div class="group cursor-pointer" data-aos="fade-up" data-aos-delay="100">
+                    <div class="overflow-hidden bg-gray-900 aspect-[16/10] mb-6">
+                        <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1000" 
+                            class="w-full h-full object-cover  group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" 
+                            alt="Legal Insight 1">
+                    </div>
+                    <div class="space-y-4">
+                        <span class="text-gray-400 text-[10px] font-bold  uppercase tracking-[0.4em]">Market Update • Feb 2026</span>
+                        <h3 class="serif text-xl md:text-2xl  leading-snug group-hover:text-blue-firm transition-colors duration-300">
+                            Heightened Spectre of Corporate Criminal Liability Under Indonesian Law
+                        </h3>
+                        <p class="text-gray-500 text-sm font-light line-clamp-2">
+                            Exploring the new regulatory framework and its implications for multinational corporations operating in Indonesia.
+                        </p>
+                        
+                        <a href="detail-newsroom.html">
+                            <span class="inline-block text-white text-[10px] uppercase tracking-widest border-b border-white/20 pb-1 group-hover:border-white transition-all">Read More</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="group cursor-pointer" data-aos="fade-up" data-aos-delay="200">
+                    <div class="overflow-hidden bg-gray-900 aspect-[16/10] mb-6">
+                        <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=1000" 
+                            class="w-full h-full object-cover  group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" 
+                            alt="Legal Insight 2">
+                    </div>
+                    <div class="space-y-4">
+                        <span class="text-gray-400 text-[10px] font-bold uppercase tracking-[0.4em]">Publication • Jan 2026</span>
+                        <h3 class="serif text-xl md:text-2xl  leading-snug group-hover:text-blue-firm transition-colors duration-300">
+                            Lexology Panoramic Publishes the 2026 "Guide to Private M&A in Indonesia"
+                        </h3>
+                        <p class="text-gray-500 text-sm font-light line-clamp-2">
+                            Our firm is proud to contribute to the latest comprehensive guide on Indonesian Mergers and Acquisitions.
+                        </p>
+                        
+                        <a href="detail-newsroom.html">
+                            <span class="inline-block text-white text-[10px] uppercase tracking-widest border-b border-white/20 pb-1 group-hover:border-white transition-all">Read More</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="group cursor-pointer" data-aos="fade-up" data-aos-delay="300">
+                    <div class="overflow-hidden bg-gray-900 aspect-[16/10] mb-6">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000" 
+                            class="w-full h-full object-cover  group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" 
+                            alt="Legal Insight 3">
+                    </div>
+                    <div class="space-y-4">
+                        <span class="text-gray-400 text-[10px] font-bold uppercase tracking-[0.4em]">Regulation • Dec 2025</span>
+                        <h3 class="serif text-xl md:text-2xl  leading-snug group-hover:text-blue-firm transition-colors duration-300">
+                            Indonesia Eases Market Entry for FDI Companies under BKPM Regulation
+                        </h3>
+                        <p class="text-gray-500 text-sm font-light line-clamp-2">
+                            A detailed analysis of the simplified licensing process for foreign direct investment in the tech sector.
+                        </p>
+                        
+                        <a href="detail-newsroom.html">
+                            <span class="inline-block text-white text-[10px] uppercase tracking-widest border-b border-white/20 pb-1 group-hover:border-white transition-all">Read More</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section class="py-36 px-8 ">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-28">
+
+            <!-- LEFT SIDE (Text) -->
+            <div data-aos="fade-up" class="flex flex-col justify-center">
+
+                <p class="text-xs tracking-[0.4em] uppercase text-gray-500 mb-6">
+                    Contact
+                </p>
+
+                <h2 class="serif text-4xl md:text-5xl lg:text-6xl italic leading-tight ">
+                    Let’s discuss your <br>
+                    <span class="text-gray-500">legal strategy.</span>
+                </h2>
+
+                <div class="w-16 h-[1px] bg-blue-firm mt-10 mb-10"></div>
+
+                <p class="text-gray-500 max-w-md leading-relaxed font-light">
+                    We provide strategic, discreet, and results-oriented legal counsel 
+                    tailored to your individual and corporate needs.
+                </p>
+
+            </div>
+
+
+            <!-- RIGHT SIDE (Form) -->
+            <div data-aos="fade-left">
+
+                <form class="grid grid-cols-1 gap-10">
+
+                    <input type="text" placeholder="Full Name"
+                        class="bg-transparent border-b border-gray-500 py-5 text-sm 
+                        focus:border-blue-firm outline-none transition-all duration-300">
+
+                    <input type="email" placeholder="Email Address"
+                        class="bg-transparent border-b border-gray-500 py-5 text-sm 
+                        focus:border-blue-firm outline-none transition-all duration-300">
+
+                    <textarea placeholder="Briefly describe your matter"
+                        rows="4"
+                        class="bg-transparent border-b border-gray-500 py-5 text-sm 
+                        focus:border-blue-firm outline-none transition-all duration-300"></textarea>
+
+                    <button class="mt-8 text-xs uppercase tracking-[0.4em] 
+                        font-semibold border border-gray-500 text-gray-500
+                        px-10 py-4 w-fit 
+                        hover:bg-[#344C64] hover:text-white h
+                        transition-all duration-300">
+
+                        Request Consultation
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- <footer class=" py-20 px-8 border-t border-gray-900">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-12">
+            <div>
+                <h4 class="font-bold tracking-[0.3em] text-lg leading-tight uppercase">Pasaka<br>Rievan <br>Smit</h4>
+            </div>
+            <div class="text-right">
+                <p class="uppercase tracking-widest text-[10px] font-bold mb-4">Our Office</p>
+                <p class="text-gray-500 text-sm leading-relaxed">
+                    Mayapada Tower I Lantai 11 unit 02A<br>
+                    Jl. Jend Sudirman Kav. 28, Jakarta Selatan<br>
+                    Indonesia
+                </p>
+
+            </div>
+        </div>
+    </footer> -->
+
+    <footer class="py-28 px-8 bg-[#344C64] border-t border-white/10 ">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-16">
+
+            <!-- BRAND -->
+            <div>
+                <h4 class="text-xl tracking-[0.3em] text-white uppercase leading-tight font-light">
+                    <span class="font-bold">P</span>asaka <br>
+                    <span class="font-bold">R</span>ievan <br>
+                    <span class="font-bold">S</span>mith
+                </h4>
+            </div>
+
+
+            <!-- MAIN OFFICE -->
+            <div>
+                <p class="uppercase tracking-[0.3em] text-xs text-gray-200 mb-6">
+                    Main Office
+                </p>
+
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    Mayapada Tower I, Lantai 11 unit 02A <br>
+                    Jl. Jend Sudirman Kav. 28 <br>
+                    Jakarta Selatan, Indonesia
+                </p>
+
+                <div class="mt-12">
+                    <p class="uppercase tracking-[0.3em] text-xs text-gray-200 mb-6">
+                        Bali Desk
+                    </p>
+
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Jl. Sunset Road No.900B, Seminyak <br>
+                        Kuta, Badung, Bali 80361
+                    </p>
+                </div>
+            </div>
+
+
+            <!-- CONTACT -->
+            <div>
+                <p class="uppercase tracking-[0.3em] text-xs text-gray-200 mb-6">
+                    Contact
+                </p>
+
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    inquiry@pasakarievanlaw.com
+                </p>
+
+                <p class="text-gray-400 text-sm leading-relaxed mt-4">
+                    www.pasakarievansmith.com
+                </p>
+            </div>
+
+        </div>
+
+        <!-- Bottom Line -->
+        <div class="max-w-7xl mx-auto mt-20 pt-10 border-t border-white/10 flex flex-col md:flex-row justify-between text-xs text-gray-400">
+            <p>© 2026 Pasaka Rievan Smith. All Rights Reserved.</p>
+            <p class="uppercase tracking-[0.3em]">Indonesia</p>
+        </div>
+    </footer>
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+
+        window.addEventListener('scroll', function() {
+            // --- Logic untuk Header (Tetap ada) ---
+            const heroImage = document.getElementById('heroImage');
+            let scrollPosition = window.pageYOffset;
+            if (heroImage) {
+                heroImage.style.transform = `translate3d(0, ${scrollPosition * 0.4}px, 0)`;
+            }
+
+            // --- Logic untuk Quote (Smart Parallax) ---
+            const quoteImage = document.getElementById('quoteImage');
+            if (quoteImage) {
+                const parentSection = quoteImage.closest('.quote-parallax-wrapper');
+                const rect = parentSection.getBoundingClientRect();
+                const viewHeight = window.innerHeight;
+
+                // Hanya proses jika section masuk dalam jangkauan layar
+                if (rect.top <= viewHeight && rect.bottom >= 0) {
+                    // Menghitung seberapa jauh section telah melewati layar
+                    // Menggunakan rect.top agar pergerakan dimulai tepat saat section muncul
+                    const speed = 0.15; // Sesuaikan untuk intensitas paralaks
+                    const yOffset = rect.top * speed;
+                    
+                    quoteImage.style.transform = `translate3d(0, ${yOffset}px, 0)`;
+                }
+            }
+        });
+        
+        // Simple Parallax Effect
+        
+        const swiper = new Swiper('.mySwiper', {
+            loop: true,
+            speed: 1500,
+            autoplay: { delay: 5000 },
+            pagination: { el: '.swiper-pagination', clickable: true },
+        });
+        // 1. Inisialisasi Swiper untuk Teks (Value Swiper)
+        const valueSwiper = new Swiper('.valueSwiper', {
+            loop: true,
+            speed: 1000,
+            effect: 'fade', // Menggunakan efek fade agar teks lebih elegan saat berganti
+            fadeEffect: {
+                crossFade: true
+            },
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+
+        // 2. Script Paralaks Manual (Lebih Stabil)
+        window.addEventListener('scroll', function() {
+            const parallax = document.querySelector('.parallax-bg');
+            let scrollPosition = window.pageYOffset;
+            
+            // Angka 0.5 menentukan kecepatan gerak gambar (makin kecil makin lambat)
+            if (parallax) {
+                parallax.style.transform = `translateY(${scrollPosition * 0.2}px)`;
+            }
+        });
+
+        // Mobile Menu Toggle with Hamburger Animation
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const line1 = document.getElementById('line1');
+        const line2 = document.getElementById('line2');
+        const line3 = document.getElementById('line3');
+        let isMenuOpen = false;
+
+        menuBtn.addEventListener('click', () => {
+            isMenuOpen = !isMenuOpen;
+            
+            if (isMenuOpen) {
+                // Animasi Hamburger ke 'X'
+                line1.classList.add('rotate-45', 'translate-x-[2px]', 'translate-y-[-1px]');
+                line2.classList.add('opacity-0');
+                line3.classList.add('-rotate-45', 'translate-x-[2px]', 'translate-y-[1px]');
+                
+                // Tampilkan Menu
+                mobileMenu.classList.remove('translate-x-full');
+                
+                // Kunci scroll body
+                document.body.style.overflow = 'hidden';
+            } else {
+                // Kembalikan Hamburger
+                line1.classList.remove('rotate-45', 'translate-x-[2px]', 'translate-y-[-1px]');
+                line2.classList.remove('opacity-0');
+                line3.classList.remove('-rotate-45', 'translate-x-[2px]', 'translate-y-[1px]');
+                
+                // Sembunyikan Menu
+                mobileMenu.classList.add('translate-x-full');
+                
+                // Buka scroll body
+                document.body.style.overflow = 'auto';
+            }
+        });
+        
+        // Inisialisasi Lucide Icons kembali
+        lucide.createIcons();
+    </script>
+</body>
+</html>

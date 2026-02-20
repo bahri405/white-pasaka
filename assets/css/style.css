@@ -1,0 +1,423 @@
+
+/* ============================================
+   1. CORE TYPOGRAPHY & BODY STYLES
+   ============================================ */
+
+
+   :root {
+    --primary: #344C64;
+    --primary-dark: #2c3e50;
+    --primary-soft: #5F7A8A;
+    --white: #ffffff;
+    --gray-soft: #E6EDF3;
+    --gold-accent: #C6A75E;
+}
+
+.serif {
+    font-family: "Playfair Display", serif;
+    /* font-family: "Libre Baskerville", serif; */
+    /* font-family: "Merriweather", serif; */
+}
+
+
+body {
+    font-family: "Inter", sans-serif;
+    /* font-family: Cambria, Georgia, "Times New Roman", serif; */
+    color: var(--primary);
+}
+
+p , a {
+    font-family: Cambria, Georgia, "Times New Roman", serif;
+    
+}
+
+
+
+/* ============================================
+   2. COLOR & UTILITY CLASSES
+   ============================================ */
+
+.text-blue-firm {
+    color: #2c3e50;
+}
+
+.bg-blue-firm {
+    background-color: #2c3e50;
+}
+
+.primary-bg {
+    background-color: #2c3e50;
+}
+
+.footer-gradient {
+    background: linear-gradient(to bottom, #000000, #2c3e50);
+}
+
+.rounded-xl {
+    border-radius: 1rem;
+}
+
+.shadow-2xl {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+/* ============================================
+   3. NAVIGATION STYLES
+   ============================================ */
+
+.nav-link {
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    transform: translateX(-101%);
+    transition: transform 0.3s ease;
+}
+
+.nav-link:hover::after {
+    transform: translateX(0);
+}
+
+/* .nav-blur {
+    backdrop-filter: blur(8px);
+    background: rgba(44, 62, 80, 0.2);
+} */
+
+.nav-blur {
+    backdrop-filter: blur(10px);
+    background: rgba(52, 76, 100, 0.7);
+}
+
+.nav-blur {
+    backdrop-filter: blur(8px);
+    background: rgba(44, 62, 80, 0.2);
+}
+
+/* ============================================
+   4. BUTTONS
+   ============================================ */
+
+.btn-primary {
+    background-color: #2c3e50;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    position: relative;
+    z-index: 1;
+}
+
+.btn-primary:hover {
+    background-color: #1a252f;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* ============================================
+   5. LENIS SMOOTH SCROLL
+   ============================================ */
+
+html.lenis {
+    height: auto;
+}
+
+.lenis-smooth {
+    scroll-behavior: auto !important;
+}
+
+.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+}
+
+/* ============================================
+   6. PARALLAX EFFECTS
+   ============================================ */
+
+.parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.parallax-bg {
+    background-attachment: fixed;
+    will-change: transform;
+}
+
+.parallax-enhanced {
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    will-change: transform;
+}
+
+.header-scrim {
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.8) 0%,
+            rgba(0, 0, 0, 0.2) 40%,
+            rgba(0, 0, 0, 0) 60%,
+            rgba(0, 0, 0, 1) 100%);
+}
+
+.header-scrim {
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.8) 0%,
+            rgba(0, 0, 0, 0.2) 40%,
+            rgba(0, 0, 0, 0) 60%,
+            rgba(0, 0, 0, 1) 100%);
+}
+
+/* ============================================
+   7. HERO SECTION
+   ============================================ */
+
+.hero-wrapper {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.parallax-hero-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120%;
+    object-fit: cover;
+    will-change: transform;
+}
+
+/* ============================================
+   8. QUOTE SECTION
+   ============================================ */
+
+.quote-parallax-wrapper {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.parallax-quote-img {
+    position: absolute;
+    top: -20%;
+    left: 0;
+    width: 100%;
+    height: 140%;
+    object-fit: cover;
+    will-change: transform;
+}
+
+/* ============================================
+   9. SWIPER / CAROUSEL
+   ============================================ */
+
+.swiper {
+    width: 100%;
+    height: 600px;
+}
+
+.swiper-slide {
+    height: 500px !important;
+    display: flex;
+    flex-direction: column;
+}
+
+.swiper-slide img {
+    z-index: 0;
+}
+
+.swiper-pagination-bullet {
+    background: white !important;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: #2c3e50 !important;
+}
+
+.valueSwiper .swiper-slide {
+    transition: opacity 0.5s ease;
+    opacity: 0 !important;
+}
+
+.valueSwiper .swiper-slide-active {
+    opacity: 1 !important;
+}
+
+.valueSwiper .swiper-slide-active {
+    opacity: 1 !important;
+}
+
+/* ============================================
+   10. PRACTICE CARDS
+   ============================================ */
+
+.practice-card {
+    position: relative;
+    height: 250px;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    cursor: pointer;
+}
+
+.practice-card img {
+    transition: transform 1.2s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.practice-card:hover img {
+    transform: scale(1.1);
+}
+
+.practice-overlay {
+    background: linear-gradient(to top,
+            rgba(0, 0, 0, 0.8) 0%,
+            rgba(0, 0, 0, 0.2) 60%,
+            transparent 100%);
+    transition: background 0.4s ease;
+}
+
+.practice-card:hover .practice-overlay {
+    background: rgba(44, 62, 80, 0.4);
+}
+
+.learn-more {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.4s ease;
+}
+
+.practice-card:hover .learn-more {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ============================================
+   11. PROFESSIONAL CARDS
+   ============================================ */
+
+.prof-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 0.75rem;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    margin-top: 0.5rem;
+}
+
+.prof-name-text {
+    color: #ffffff;
+    transition: all 0.5s ease;
+}
+
+.prof-arrow {
+    color: rgba(255, 255, 255, 0.566);
+    transform: translateX(-5px);
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Professional Card Hover State */
+.group:hover .prof-link {
+    border-bottom-color: rgba(255, 255, 255, 1);
+}
+
+.group:hover .prof-name-text {
+    color: #ffffff;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+}
+
+.group:hover .prof-arrow {
+    color: #ffffff;
+    transform: translateX(0);
+    opacity: 1;
+}
+
+/* ============================================
+   12. ARTICLE CONTENT
+   ============================================ */
+
+.article-content p {
+    margin-bottom: 1.5rem;
+    color: #d1d5db;
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+.article-content h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 1.8rem;
+    color: white;
+    margin: 2.5rem 0 1rem 0;
+    font-style: italic;
+}
+
+article img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    margin: 2rem 0;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* ============================================
+   13. TABLES
+   ============================================ */
+
+.custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.custom-table th {
+    background: #2c3e50;
+    color: white;
+    text-align: left;
+    padding: 1rem;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.custom-table td {
+    padding: 1.5rem 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.95rem;
+    vertical-align: top;
+}
+
+/* ============================================
+   14. SIDEBAR & AUTHOR
+   ============================================ */
+
+.author-card {
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    padding-left: 2rem;
+    transition: all 0.3s ease;
+}
+
+/* ============================================
+   15. MOBILE RESPONSIVE
+   ============================================ */
+
+@media (max-width: 768px) {
+    .parallax-enhanced {
+        background-attachment: scroll;
+        height: 50vh;
+    }
+}
