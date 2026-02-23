@@ -15,32 +15,107 @@
 <body class="overflow-x-hidden">
     
 
-    <header class="relative h-[70vh] flex items-end overflow-hidden parallax"
-        >
-        
-        <div class="absolute inset-0 z-0">
-            <img src="https://images.unsplash.com/photo-1505547828843-176834e42154?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
-                id="parallax-bg"
-                class="absolute top-0 left-0 w-full h-[120%] object-cover will-change-transform" 
-                alt="Header Background">
-            <div class="absolute inset-0 header-scrim"></div>
-        </div>
-
-        <nav class="absolute top-0 w-full p-6 px-8 flex justify-between items-center z-50 transition-all duration-300">
+    <nav class="absolute top-0 w-full p-6 px-8 flex justify-between items-center z-50 transition-all duration-300">
             <a href="index.html" class="z-[60]">
                 <div class="text-2xl md:text-3xl font-extralight tracking-[0.2em] uppercase leading-tight text-white">
                     <span class="font-extrabold">P</span>asaka<br> 
                     <span class="font-extrabold">R</span>ievan<br> 
-                    <span class="font-extrabold">S</span>mith
+                    <span class="font-extrabold">S</span>mith<br>
+                    <span class="block text-[10px] leading-none tracking-[0.3em] mt-1">
+                        Counsellors at <span class="font-semibold">Law</span>
+                    </span>
                 </div>
             </a>
             
+
             <ul class="hidden md:flex space-x-10 text-[10px] uppercase tracking-[0.3em] font-light text-white">
-                <a href="index.html"><li class="nav-link pb-1 cursor-pointer hover:text-blue-200 transition-colors">Home</li></a>
-                <a href="about-us.html"><li class="nav-link pb-1 cursor-pointer hover:text-blue-200 transition-colors">About</li></a>
-                <a href="profesionals.html"><li class="nav-link pb-1 cursor-pointer hover:text-blue-200 transition-colors">Professionals</li></a>
-                <a href="practice-area.html"><li class="nav-link pb-1 cursor-pointer hover:text-blue-200 transition-colors">Practices</li></a>
-                <a href="newsroom.html"><li class="nav-link pb-1 cursor-pointer hover:text-blue-200 transition-colors">Newsroom</li></a>
+
+                <!-- The Firm -->
+                <li class="nav-link pb-1 cursor-pointer hover:text-gray-300 transition-colors">
+                    <a href="about-us.html" class="hover:text-gray-300 transition-colors">
+                        The Firm
+                    </a>
+                </li>
+
+                <!-- Professionals Dropdown -->
+                <li class="relative group ">
+                    <a href="profesionals.html" 
+                    class="flex items-center gap-2 hover:text-gray-300 transition-colors">
+                        Professionals
+                        <i data-lucide="chevron-down"
+                        class="w-3 h-3 transition-transform duration-300 group-hover:rotate-180">
+                        </i>
+                    </a>
+
+                    <div class="absolute left-0 top-full mt-4 w-40
+                                bg-white/10 backdrop-blur-xl
+                                border border-white/20
+                                shadow-2xl
+                                opacity-0 invisible
+                                group-hover:opacity-100 group-hover:visible
+                                transition-all duration-300">
+
+                        <div class="flex flex-col text-[11px] tracking-widest uppercase py-4 text-white">
+                            <a href="#" class="px-6 py-2 hover:bg-white/10 transition-colors">Partners</a>
+                            <a href="#" class="px-6 py-2 hover:bg-white/10 transition-colors">Counsels</a>
+                            <a href="#" class="px-6 py-2 hover:bg-white/10 transition-colors">Associates</a>
+                        </div>
+
+                    </div>
+                </li>
+
+                <!-- Area of Expertise Dropdown -->
+                <li class="relative group">
+                    <a href="practice-area.html" 
+                    class="flex items-center gap-2 hover:text-gray-300 transition-colors">
+                        Area of Expertise
+                        <i data-lucide="chevron-down"
+                        class="w-3 h-3 transition-transform duration-300 group-hover:rotate-180">
+                        </i>
+                    </a>
+
+                    <div class="absolute left-0 top-full mt-4 w-64
+                                bg-white/10 backdrop-blur-xl
+                                border border-white/20
+                                shadow-2xl 
+                                opacity-0 invisible
+                                group-hover:opacity-100 group-hover:visible
+                                transition-all duration-300">
+
+                        <div class="flex flex-col text-[11px] tracking-widest uppercase py-4 text-white">
+                            <a href="#" class="px-6 py-2 hover:bg-white/10 transition-colors">
+                                Banking & Finance
+                            </a>
+                            <a href="#" class="px-6 py-2 hover:bg-white/10 transition-colors">
+                                Capital Markets & Securities
+                            </a>
+                            <a href="#" class="px-6 py-2 hover:bg-white/10 transition-colors">
+                                Commercial Contracts
+                            </a>
+                            <a href="#" class="px-6 py-2 hover:bg-white/10 transition-colors">
+                                Private Wealth
+                            </a>
+                        </div>
+
+                    </div>
+                </li>
+
+                <li class="nav-link pb-1 cursor-pointer hover:text-gray-300 transition-colors">
+                    <a href="newsroom.html" class="hover:text-gray-300">Insights</a>
+                </li>
+                <li class="nav-link pb-1 cursor-pointer hover:text-gray-300 transition-colors">
+                    <a href="contact.html" class="hover:text-gray-300">Reach Us</a>
+                </li>
+                <li class="nav-link pb-1 cursor-pointer hover:text-gray-300 transition-colors">
+                    <a href="carrers.html" class="hover:text-gray-300">Join Us</a>
+                </li>
+                <div class="flex items-center pb-1 gap-2 text-white/60">
+                        <i data-lucide="globe" class="w-3 h-3 text-[#C9A24D]"></i>
+                        <div class="flex gap-2 text-[10px] font-bold tracking-widest">
+                            <button class="text-white hover:text-[#C9A24D] transition-colors" id="lang-en">EN</button>
+                            
+                        </div>
+                </div>
             </ul>
 
             <button id="menuBtn" class="md:hidden z-[60] flex flex-col justify-between h-5 w-6 outline-none">
@@ -49,29 +124,85 @@
                 <span class="block h-0.5 w-full bg-white transition-all duration-300 origin-left" id="line3"></span>
             </button>
 
-            <div id="mobileMenu" class="fixed inset-0 bg-[#000] z-[55] flex flex-col items-center justify-center translate-x-full transition-transform duration-500 ease-in-out">
+            <div id="mobileMenu" class="fixed inset-0 bg-[#344C64] z-[55] flex flex-col items-center justify-center translate-x-full transition-transform duration-500 ease-in-out">
                 <ul class="flex flex-col space-y-8 text-center text-sm uppercase tracking-[0.4em] font-light text-white">
-                    <a href="index.html" class="hover:text-blue-200 transition-colors">Home</a>
-                    <a href="about-us.html" class="hover:text-blue-200 transition-colors">About The Firm</a>
-                    <a href="profesionals.html" class="hover:text-blue-200 transition-colors">Professionals</a>
-                    <a href="practice-area.html" class="hover:text-blue-200 transition-colors">Practice Areas</a>
-                    <a href="newsroom.html" class="hover:text-blue-200 transition-colors">Newsroom</a>
+                    
+                    <a href="about-us.html" class="hover:text-gray-300 transition-colors">The Firm </a>
+                    <li class="w-full">
+                        <button onclick="toggleDropdown('mobileProf')" 
+                            class="w-full flex justify-between items-center py-3">
+                            <span>Professionals</span>
+                            <i data-lucide="chevron-down" 
+                            id="icon-mobileProf"
+                            class="w-4 h-4 transition-transform duration-300"></i>
+                        </button>
+
+                        <div id="mobileProf"
+                            class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out
+                                    bg-[#344C64]/60 backdrop-blur-xl
+                                    border border-white/10 rounded-md">
+
+                            <div class="flex flex-col text-[11px] tracking-widest uppercase py-4 text-white">
+                                <a href="#" class="px-6 py-2 hover:bg-white/10">Partners</a>
+                                <a href="#" class="px-6 py-2 hover:bg-white/10">Counsels</a>
+                                <a href="#" class="px-6 py-2 hover:bg-white/10">Associates</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="w-full">
+                        <button onclick="toggleDropdown('mobilePractice')" 
+                            class="w-full flex justify-between items-center py-3">
+                            <span>Area of Expertise</span>
+                            <i data-lucide="chevron-down" 
+                            id="icon-mobilePractice"
+                            class="w-4 h-4 transition-transform duration-300"></i>
+                        </button>
+
+                        <div id="mobilePractice"
+                            class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out
+                                    bg-[#344C64]/60 backdrop-blur-xl
+                                    border border-white/10 rounded-md">
+
+                            <div class="flex flex-col text-[11px] tracking-widest uppercase py-4 text-white">
+                                <a href="#" class="px-6 py-2 hover:bg-white/10">Banking & Finance</a>
+                                <a href="#" class="px-6 py-2 hover:bg-white/10">Capital Markets & Securities</a>
+                                <a href="#" class="px-6 py-2 hover:bg-white/10">Commercial Contracts</a>
+                                <a href="#" class="px-6 py-2 hover:bg-white/10">Private Wealth</a>
+                            </div>
+                        </div>
+                    </li>
+                    <a href="newsroom.html" class="hover:text-gray-300 transition-colors">Insights</a>
+                    <a href="#" class="hover:text-gray-300 transition-colors">Reach Us</a>
+                    <a href="#" class="hover:text-gray-300 transition-colors">Join us</a>
                 </ul>
                 
                 <div class="absolute bottom-12 flex space-x-6">
                     <div class="h-[1px] w-8 bg-white/20 self-center"></div>
-                    <p class="text-[9px] text-gray-500 tracking-widest uppercase">PRS Law Firm</p>
+                    <p class="text-[9px] text-gray-500 tracking-widest uppercase">PRS</p>
                     <div class="h-[1px] w-8 bg-white/20 self-center"></div>
                 </div>
             </div>
         </nav>
+
+    <header class="relative h-[70vh] flex items-end overflow-hidden parallax">
+        
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1505547828843-176834e42154?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                id="parallax-bg"
+                class="absolute top-0 left-0 w-full h-[120%] object-cover will-change-transform" 
+                alt="Header Background">
+            <!-- <div class="absolute inset-0 header-scrim"></div> -->
+            <div class="absolute inset-0 bg-gradient-to-b from-white/10 via-transparent to-[#344C64]"></div>
+            <div class="absolute inset-0 bg-[#344C64]/40"></div>
+        </div>
+
 
         <div class="relative z-10 w-full max-w-7xl mx-auto px-8 pb-12">
             <div class="flex flex-col md:flex-row md:items-end justify-between items-start gap-6">
                 
                 <div class="md:w-1/2" data-aos="fade-up">
                     <h1 class="text-4xl md:text-6xl serif italic tracking-tight text-white leading-none">
-                        Practice Areas
+                        Area of Expertise
                     </h1>
                 </div>
 
@@ -88,17 +219,17 @@
     </header>
 
     <!-- conten practice area -->
-    <section class="bg-black py-24 px-8">
+    <section class="pt-24 px-8">
         <div class="max-w-7xl mx-auto">
             
             <div class="flex flex-col md:flex-row justify-between items-start mb-20 gap-8" data-aos="fade-up">
                 <div class="md:w-3/5">
-                    <h2 class="serif text-4xl md:text-6xl text-white italic leading-tight">
+                    <h2 class="serif text-4xl md:text-6xl  italic leading-tight">
                         Helping You Solve Your Toughest <br> and <span class="text-gray-500">Most Complex</span> Legal Issues
                     </h2>
                 </div>
                 <div class="md:w-1/3">
-                    <p class="text-gray-400 text-sm font-light leading-relaxed border-l border-[#2c3e50] pl-6">
+                    <p class="text-gray-500 text-sm font-light leading-relaxed border-l border-[#2c3e50] pl-6">
                         You need people on the ground who understand the complex local culture as well as a team that can assist you in navigating your way through legal issues in Indonesia.
                     </p>
                 </div>
@@ -107,7 +238,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 
                 <div class="practice-card group" data-aos="fade-up">
-                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1000" class="w-full h-full object-cover grayscale group-hover:grayscale-0" alt="General Corporate">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1000" class="w-full h-full object-cover  group-hover:grayscale-0" alt="General Corporate">
                     <div class="absolute inset-0 practice-overlay flex flex-col justify-center items-center text-center p-6">
                         <h3 class="serif text-3xl text-white italic transition-all duration-500 group-hover:-translate-y-4">General Corporate</h3>
                         <div class="learn-more">
@@ -117,7 +248,7 @@
                 </div>
 
                 <div class="practice-card group" data-aos="fade-up" data-aos-delay="100">
-                    <img src="https://images.unsplash.com/photo-1681505531034-8d67054e07f6?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="w-full h-full object-cover grayscale group-hover:grayscale-0" alt="M&A">
+                    <img src="https://images.unsplash.com/photo-1681505531034-8d67054e07f6?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="w-full h-full object-cover  group-hover:grayscale-0" alt="M&A">
                     <div class="absolute inset-0 practice-overlay flex flex-col justify-center items-center text-center p-6">
                         <h3 class="serif text-3xl text-white italic transition-all duration-500 group-hover:-translate-y-4">Mergers & Acquisitions</h3>
                         <div class="learn-more">
@@ -127,7 +258,7 @@
                 </div>
 
                 <div class="practice-card group md:col-span-2" data-aos="fade-up">
-                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1000" class="w-full h-full object-cover grayscale group-hover:grayscale-0" alt="TMT">
+                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1000" class="w-full h-full object-cover  group-hover:grayscale-0" alt="TMT">
                     <div class="absolute inset-0 practice-overlay flex flex-col justify-center items-center text-center p-6">
                         <h3 class="serif text-3xl text-white italic transition-all duration-500 group-hover:-translate-y-4">Technology, Media & Telecommunication</h3>
                         <div class="learn-more">
@@ -137,7 +268,7 @@
                 </div>
 
                 <div class="practice-card group" data-aos="fade-up">
-                    <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=1000" class="w-full h-full object-cover grayscale group-hover:grayscale-0" alt="Bankruptcy">
+                    <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=1000" class="w-full h-full object-cover  group-hover:grayscale-0" alt="Bankruptcy">
                     <div class="absolute inset-0 practice-overlay flex flex-col justify-center items-center text-center p-6">
                         <h3 class="serif text-3xl text-white italic transition-all duration-500 group-hover:-translate-y-4">Bankruptcy / Restructuring</h3>
                         <div class="learn-more">
@@ -147,7 +278,7 @@
                 </div>
 
                 <div class="practice-card group" data-aos="fade-up" data-aos-delay="100">
-                    <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=1000" class="w-full h-full object-cover grayscale group-hover:grayscale-0" alt="Dispute Resolution">
+                    <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=1000" class="w-full h-full object-cover  group-hover:grayscale-0" alt="Dispute Resolution">
                     <div class="absolute inset-0 practice-overlay flex flex-col justify-center items-center text-center p-6">
                         <h3 class="serif text-3xl text-white italic transition-all duration-500 group-hover:-translate-y-4">Dispute Resolution</h3>
                         <div class="learn-more">
@@ -160,43 +291,128 @@
         </div>
     </section>
 
-    <section class="bg-black py-32 px-8 border-t border-gray-900">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-20">
-            <div class="order-2 md:order-1" data-aos="fade-up">
-                <form class="grid grid-cols-2 gap-6">
-                    <input type="text" placeholder="First Name" class="bg-transparent border-b border-gray-800 py-4 text-sm focus:border-blue-firm outline-none">
-                    <input type="text" placeholder="Last Name" class="bg-transparent border-b border-gray-800 py-4 text-sm focus:border-blue-firm outline-none">
-                    <input type="email" placeholder="Email" class="bg-transparent border-b border-gray-800 py-4 text-sm focus:border-blue-firm outline-none col-span-2">
-                    <textarea placeholder="Message" rows="4" class="bg-transparent border-b border-gray-800 py-4 text-sm focus:border-blue-firm outline-none col-span-2"></textarea>
-                    <button class="col-span-2 text-left text-xs uppercase tracking-[0.4em] font-bold mt-8 hover:text-blue-firm transition-colors">Submit Request —</button>
-                </form>
-            </div>
+    <section class="py-36 px-8 ">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-28">
 
-            <div class="order-1 md:order-2" data-aos="fade-left">
-                <h2 class="serif text-4xl md:text-5xl lg:text-6xl italic leading-tight">
-                    We are a full-service law firm with <span class="text-gray-500">long-held and deep-seated</span> expertise in the industry.
+            <!-- LEFT SIDE (Text) -->
+            <div data-aos="fade-up" class="flex flex-col justify-center">
+
+                <p class="text-xs tracking-[0.4em] uppercase text-gray-500 mb-6">
+                    Contact
+                </p>
+
+                <h2 class="serif text-4xl md:text-5xl lg:text-6xl italic leading-tight ">
+                    Let’s discuss your <br>
+                    <span class="text-gray-500">legal strategy.</span>
                 </h2>
-                <p class="mt-8 text-blue-firm font-bold text-xs uppercase tracking-[0.3em]">Let's have a talk!</p>
-            </div>
-        </div>
-    </section>
 
-    <footer class="bg-black py-20 px-8 border-t border-gray-900">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-12">
-            <div>
-                <h4 class="font-bold tracking-[0.3em] text-lg leading-tight uppercase">Pasaka<br>Rievan <br>Smit</h4>
-            </div>
-            <div class="text-right">
-                <p class="uppercase tracking-widest text-[10px] font-bold mb-4">Our Office</p>
-                <p class="text-gray-500 text-sm leading-relaxed">
-                    Mayapada Tower I Lantai 11 unit 02A<br>
-                    Jl. Jend Sudirman Kav. 28, Jakarta Selatan<br>
-                    Indonesia
+                <div class="w-16 h-[1px] bg-blue-firm mt-10 mb-10"></div>
+
+                <p class="text-gray-500 max-w-md leading-relaxed font-light">
+                    We provide strategic, discreet, and results-oriented legal counsel 
+                    tailored to your individual and corporate needs.
                 </p>
 
             </div>
+
+
+            <!-- RIGHT SIDE (Form) -->
+            <div data-aos="fade-left">
+
+                <form class="grid grid-cols-1 gap-10">
+
+                    <input type="text" placeholder="Full Name"
+                        class="bg-transparent border-b border-gray-500 py-5 text-sm 
+                        focus:border-blue-firm outline-none transition-all duration-300">
+
+                    <input type="email" placeholder="Email Address"
+                        class="bg-transparent border-b border-gray-500 py-5 text-sm 
+                        focus:border-blue-firm outline-none transition-all duration-300">
+
+                    <textarea placeholder="Briefly describe your matter"
+                        rows="4"
+                        class="bg-transparent border-b border-gray-500 py-5 text-sm 
+                        focus:border-blue-firm outline-none transition-all duration-300"></textarea>
+
+                    <button class="mt-8 text-xs uppercase tracking-[0.4em] 
+                        font-semibold border border-gray-500 text-gray-500
+                        px-10 py-4 w-fit 
+                        hover:bg-[#344C64] hover:text-white h
+                        transition-all duration-300">
+
+                        Request Consultation
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="py-28 px-8 bg-[#344C64] border-t border-white/10 ">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-16">
+
+            <!-- BRAND -->
+            <div>
+                <h4 class="text-xl tracking-[0.3em] text-white uppercase leading-tight font-light">
+                    <span class="font-bold">P</span>asaka <br>
+                    <span class="font-bold">R</span>ievan <br>
+                    <span class="font-bold">S</span>mith
+                </h4>
+            </div>
+
+
+            <!-- MAIN OFFICE -->
+            <div>
+                <p class="uppercase tracking-[0.3em] text-xs text-gray-200 mb-6">
+                    Main Office
+                </p>
+
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    Mayapada Tower I, Lantai 11 unit 02A <br>
+                    Jl. Jend Sudirman Kav. 28 <br>
+                    Jakarta Selatan, Indonesia
+                </p>
+
+                <div class="mt-12">
+                    <p class="uppercase tracking-[0.3em] text-xs text-gray-200 mb-6">
+                        Bali Desk
+                    </p>
+
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Jl. Sunset Road No.900B, Seminyak <br>
+                        Kuta, Badung, Bali 80361
+                    </p>
+                </div>
+            </div>
+
+
+            <!-- CONTACT -->
+            <div>
+                <p class="uppercase tracking-[0.3em] text-xs text-gray-200 mb-6">
+                    Contact
+                </p>
+
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    inquiry@pasakarievanlaw.com
+                </p>
+
+                <p class="text-gray-400 text-sm leading-relaxed mt-4">
+                    www.pasakarievansmith.com
+                </p>
+            </div>
+
+        </div>
+
+        <!-- Bottom Line -->
+        <div class="max-w-7xl mx-auto mt-20 pt-10 border-t border-white/10 flex flex-col md:flex-row justify-between text-xs text-gray-400">
+            <p>© 2026 Pasaka Rievan Smith. All Rights Reserved.</p>
+            <p class="uppercase tracking-[0.3em]">Indonesia</p>
         </div>
     </footer>
+
+    
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

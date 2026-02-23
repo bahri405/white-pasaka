@@ -31,6 +31,14 @@ p , a {
     
 }
 
+.serif-heading { font-family: 'Playfair Display', serif; }
+
+.serif-body { font-family: 'Inter', sans-serif; }
+
+.reveal { opacity: 0; transform: translateY(20px); transition: all 0.8s ease-out; }
+
+.reveal.active { opacity: 1; transform: translateY(0); }
+
 
 
 /* ============================================
@@ -159,21 +167,14 @@ html.lenis {
     will-change: transform;
 }
 
-.header-scrim {
+/* .header-scrim {
     background: linear-gradient(to bottom,
             rgba(0, 0, 0, 0.8) 0%,
             rgba(0, 0, 0, 0.2) 40%,
             rgba(0, 0, 0, 0) 60%,
             rgba(0, 0, 0, 1) 100%);
-}
+} */
 
-.header-scrim {
-    background: linear-gradient(to bottom,
-            rgba(0, 0, 0, 0.8) 0%,
-            rgba(0, 0, 0, 0.2) 40%,
-            rgba(0, 0, 0, 0) 60%,
-            rgba(0, 0, 0, 1) 100%);
-}
 
 /* ============================================
    7. HERO SECTION
@@ -313,35 +314,36 @@ html.lenis {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid #2c3e50;
     padding-bottom: 0.75rem;
     transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
     margin-top: 0.5rem;
 }
 
 .prof-name-text {
-    color: #ffffff;
+    /* color: #ffffff; */
     transition: all 0.5s ease;
 }
 
 .prof-arrow {
-    color: rgba(255, 255, 255, 0.566);
+    color: #2c3e50;
     transform: translateX(-5px);
     transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 /* Professional Card Hover State */
 .group:hover .prof-link {
-    border-bottom-color: rgba(255, 255, 255, 1);
+    border-bottom-color: #126fcb;
 }
 
 .group:hover .prof-name-text {
-    color: #ffffff;
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+    color: #126fcb;
+    text-shadow: 0 0 15px rgba(19, 20, 36, 0.289);
 }
 
 .group:hover .prof-arrow {
-    color: #ffffff;
+    
+    color: #126fcb;
     transform: translateX(0);
     opacity: 1;
 }
@@ -352,7 +354,6 @@ html.lenis {
 
 .article-content p {
     margin-bottom: 1.5rem;
-    color: #d1d5db;
     line-height: 1.8;
     font-size: 1.1rem;
 }
@@ -360,7 +361,6 @@ html.lenis {
 .article-content h3 {
     font-family: "Playfair Display", serif;
     font-size: 1.8rem;
-    color: white;
     margin: 2.5rem 0 1rem 0;
     font-style: italic;
 }
@@ -386,7 +386,6 @@ article img {
 
 .custom-table th {
     background: #2c3e50;
-    color: white;
     text-align: left;
     padding: 1rem;
     font-size: 0.8rem;

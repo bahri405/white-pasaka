@@ -87,7 +87,24 @@
         }
     </style>
 </head>
-<body class="bg-white">
+<body class="bg-white overflow-x-hidden">
+                <!-- <ul class="hidden md:flex space-x-10 text-[10px] uppercase tracking-[0.3em] font-light text-white">
+                
+                <a href="about-us.html"><li class="nav-link pb-1 cursor-pointer hover:text-gray-300 transition-colors">The Firm</li></a>
+                <a href="profesionals.html"><li class="nav-link pb-1 cursor-pointer hover:text-gray-300 transition-colors">Professionals</li></a>
+                <a href="practice-area.html"><li class="nav-link pb-1 cursor-pointer hover:text-gray-300 transition-colors">Area of Expertise</li></a>
+                <a href="newsroom.html"><li class="nav-link pb-1 cursor-pointer hover:text-gray-300 transition-colors">Insights</li></a>
+                <a href="contact.html"><li class="nav-link pb-1 cursor-pointer hover:text-gray-300 transition-colors">Reach Us</li></a>
+                <a href="carrers.html"><li class="nav-link pb-1 cursor-pointer hover:text-gray-300 transition-colors">Join Us</li></a>
+                <div class="flex items-center pb-1 gap-2 text-white/60">
+                        <i data-lucide="globe" class="w-3 h-3 text-[#C9A24D]"></i>
+                        <div class="flex gap-2 text-[10px] font-bold tracking-widest">
+                            <button class="text-white hover:text-[#C9A24D] transition-colors" id="lang-en">EN</button>
+                            
+                        </div>
+                    </div>
+            </ul> -->
+
     
         <nav class="absolute top-0 w-full p-6 px-8 flex justify-between items-center z-50 transition-all duration-300">
             <a href="index.html" class="z-[60]">
@@ -101,22 +118,95 @@
                 </div>
             </a>
             
+
             <ul class="hidden md:flex space-x-10 text-[10px] uppercase tracking-[0.3em] font-light text-white">
-                
-                <a href="about-us.html"><li class="nav-link pb-1 cursor-pointer hover:text-gray-300 transition-colors">The Firm</li></a>
-                <a href="profesionals.html"><li class="nav-link pb-1 cursor-pointer hover:text-gray-300 transition-colors">Professionals</li></a>
-                <a href="practice-area.html"><li class="nav-link pb-1 cursor-pointer hover:text-gray-300 transition-colors">Area of Expertise</li></a>
-                <a href="newsroom.html"><li class="nav-link pb-1 cursor-pointer hover:text-gray-300 transition-colors">Insights</li></a>
-                <a href="#"><li class="nav-link pb-1 cursor-pointer hover:text-gray-300 transition-colors">Reach Us</li></a>
-                <a href="#"><li class="nav-link pb-1 cursor-pointer hover:text-gray-300 transition-colors">Join Us</li></a>
+
+                <!-- The Firm -->
+                <li class="nav-link pb-1 cursor-pointer hover:text-gray-300 transition-colors">
+                    <a href="about-us.html" class="hover:text-gray-300 transition-colors">
+                        The Firm
+                    </a>
+                </li>
+
+                <!-- Professionals Dropdown -->
+                <li class="relative group ">
+                    <a href="profesionals.html" 
+                    class="flex items-center gap-2 hover:text-gray-300 transition-colors">
+                        Professionals
+                        <i data-lucide="chevron-down"
+                        class="w-3 h-3 transition-transform duration-300 group-hover:rotate-180">
+                        </i>
+                    </a>
+
+                    <div class="absolute left-0 top-full mt-4 w-40
+                                bg-white/10 backdrop-blur-xl
+                                border border-white/20
+                                shadow-2xl
+                                opacity-0 invisible
+                                group-hover:opacity-100 group-hover:visible
+                                transition-all duration-300">
+
+                        <div class="flex flex-col text-[11px] tracking-widest uppercase py-4 text-white">
+                            <a href="#" class="px-6 py-2 hover:bg-white/10 transition-colors">Partners</a>
+                            <a href="#" class="px-6 py-2 hover:bg-white/10 transition-colors">Counsels</a>
+                            <a href="#" class="px-6 py-2 hover:bg-white/10 transition-colors">Associates</a>
+                        </div>
+
+                    </div>
+                </li>
+
+                <!-- Area of Expertise Dropdown -->
+                <li class="relative group">
+                    <a href="practice-area.html" 
+                    class="flex items-center gap-2 hover:text-gray-300 transition-colors">
+                        Area of Expertise
+                        <i data-lucide="chevron-down"
+                        class="w-3 h-3 transition-transform duration-300 group-hover:rotate-180">
+                        </i>
+                    </a>
+
+                    <div class="absolute left-0 top-full mt-4 w-64
+                                bg-white/10 backdrop-blur-xl
+                                border border-white/20
+                                shadow-2xl 
+                                opacity-0 invisible
+                                group-hover:opacity-100 group-hover:visible
+                                transition-all duration-300">
+
+                        <div class="flex flex-col text-[11px] tracking-widest uppercase py-4 text-white">
+                            <a href="#" class="px-6 py-2 hover:bg-white/10 transition-colors">
+                                Banking & Finance
+                            </a>
+                            <a href="#" class="px-6 py-2 hover:bg-white/10 transition-colors">
+                                Capital Markets & Securities
+                            </a>
+                            <a href="#" class="px-6 py-2 hover:bg-white/10 transition-colors">
+                                Commercial Contracts
+                            </a>
+                            <a href="#" class="px-6 py-2 hover:bg-white/10 transition-colors">
+                                Private Wealth
+                            </a>
+                        </div>
+
+                    </div>
+                </li>
+
+                <li class="nav-link pb-1 cursor-pointer hover:text-gray-300 transition-colors">
+                    <a href="newsroom.html" class="hover:text-gray-300">Insights</a>
+                </li>
+                <li class="nav-link pb-1 cursor-pointer hover:text-gray-300 transition-colors">
+                    <a href="contact.html" class="hover:text-gray-300">Reach Us</a>
+                </li>
+                <li class="nav-link pb-1 cursor-pointer hover:text-gray-300 transition-colors">
+                    <a href="carrers.html" class="hover:text-gray-300">Join Us</a>
+                </li>
                 <div class="flex items-center pb-1 gap-2 text-white/60">
                         <i data-lucide="globe" class="w-3 h-3 text-[#C9A24D]"></i>
                         <div class="flex gap-2 text-[10px] font-bold tracking-widest">
                             <button class="text-white hover:text-[#C9A24D] transition-colors" id="lang-en">EN</button>
-                            <!-- <span class="text-white/20">|</span> -->
-                            <!-- <button class="text-white/40 hover:text-white transition-colors" id="lang-id">ID</button> -->
+                            
                         </div>
-                    </div>
+                </div>
             </ul>
 
             <button id="menuBtn" class="md:hidden z-[60] flex flex-col justify-between h-5 w-6 outline-none">
@@ -125,20 +215,61 @@
                 <span class="block h-0.5 w-full bg-white transition-all duration-300 origin-left" id="line3"></span>
             </button>
 
-            <div id="mobileMenu" class="fixed inset-0 bg-[#000] z-[55] flex flex-col items-center justify-center translate-x-full transition-transform duration-500 ease-in-out">
+            <div id="mobileMenu" class="fixed inset-0 bg-[#344C64] z-[55] flex flex-col items-center justify-center translate-x-full transition-transform duration-500 ease-in-out">
                 <ul class="flex flex-col space-y-8 text-center text-sm uppercase tracking-[0.4em] font-light text-white">
                     
-                    <a href="about-us.html" class="hover:text-gray-300 transition-colors">About us</a>
-                    <a href="profesionals.html" class="hover:text-gray-300 transition-colors">Professionals</a>
-                    <a href="practice-area.html" class="hover:text-gray-300 transition-colors">Practices</a>
-                    <a href="newsroom.html" class="hover:text-gray-300 transition-colors">Article</a>
-                    <a href="#" class="hover:text-gray-300 transition-colors">Contact us</a>
-                    <a href="#" class="hover:text-gray-300 transition-colors">Carrers</a>
+                    <a href="about-us.html" class="hover:text-gray-300 transition-colors">The Firm </a>
+                    <li class="w-full">
+                        <button onclick="toggleDropdown('mobileProf')" 
+                            class="w-full flex justify-between items-center py-3">
+                            <span>Professionals</span>
+                            <i data-lucide="chevron-down" 
+                            id="icon-mobileProf"
+                            class="w-4 h-4 transition-transform duration-300"></i>
+                        </button>
+
+                        <div id="mobileProf"
+                            class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out
+                                    bg-[#344C64]/60 backdrop-blur-xl
+                                    border border-white/10 rounded-md">
+
+                            <div class="flex flex-col text-[11px] tracking-widest uppercase py-4 text-white">
+                                <a href="#" class="px-6 py-2 hover:bg-white/10">Partners</a>
+                                <a href="#" class="px-6 py-2 hover:bg-white/10">Counsels</a>
+                                <a href="#" class="px-6 py-2 hover:bg-white/10">Associates</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="w-full">
+                        <button onclick="toggleDropdown('mobilePractice')" 
+                            class="w-full flex justify-between items-center py-3">
+                            <span>Area of Expertise</span>
+                            <i data-lucide="chevron-down" 
+                            id="icon-mobilePractice"
+                            class="w-4 h-4 transition-transform duration-300"></i>
+                        </button>
+
+                        <div id="mobilePractice"
+                            class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out
+                                    bg-[#344C64]/60 backdrop-blur-xl
+                                    border border-white/10 rounded-md">
+
+                            <div class="flex flex-col text-[11px] tracking-widest uppercase py-4 text-white">
+                                <a href="#" class="px-6 py-2 hover:bg-white/10">Banking & Finance</a>
+                                <a href="#" class="px-6 py-2 hover:bg-white/10">Capital Markets & Securities</a>
+                                <a href="#" class="px-6 py-2 hover:bg-white/10">Commercial Contracts</a>
+                                <a href="#" class="px-6 py-2 hover:bg-white/10">Private Wealth</a>
+                            </div>
+                        </div>
+                    </li>
+                    <a href="newsroom.html" class="hover:text-gray-300 transition-colors">Insights</a>
+                    <a href="#" class="hover:text-gray-300 transition-colors">Reach Us</a>
+                    <a href="#" class="hover:text-gray-300 transition-colors">Join us</a>
                 </ul>
                 
                 <div class="absolute bottom-12 flex space-x-6">
                     <div class="h-[1px] w-8 bg-white/20 self-center"></div>
-                    <p class="text-[9px] text-gray-500 tracking-widest uppercase">PRS Law Firm</p>
+                    <p class="text-[9px] text-gray-500 tracking-widest uppercase">PRS</p>
                     <div class="h-[1px] w-8 bg-white/20 self-center"></div>
                 </div>
             </div>
@@ -257,78 +388,6 @@
         </div>
     </section>
 
-    <!-- <section class=" overflow-hidden">
-        <div class="max-w-7xl mx-auto px-8">
-            
-            <div class="expertise-orbit" data-aos="zoom-in">
-                <div class="expertise-bg-lines"></div>
-
-                <div class="center-label">
-                    <h2 class="serif italic text-gray-500 text-2xl uppercase tracking-[0.3em]">Area of</h2>
-                    <h3 class="text-white text-4xl font-bold tracking-widest mt-2">EXPERTISE</h3>
-                </div>
-
-                <div class="expertise-item" style="transform: translateY(-220px);">
-                    <div class="icon-circle">
-                        <i class="fas fa-university text-white"></i>
-                    </div>
-                    <p>Banking & Finance</p>
-                </div>
-
-                <div class="expertise-item" style="transform: translate(180px, -130px);">
-                    <div class="icon-circle">
-                        <i class="fas fa-globe text-white"></i>
-                    </div>
-                    <p>Capital Market</p>
-                </div>
-
-                <div class="expertise-item" style="transform: translateX(220px);">
-                    <div class="icon-circle">
-                        <i class="fas fa-users text-white"></i>
-                    </div>
-                    <p>Employment</p>
-                </div>
-
-                <div class="expertise-item" style="transform: translate(180px, 130px);">
-                    <div class="icon-circle">
-                        <i class="fas fa-building text-white"></i>
-                    </div>
-                    <p>Government Related</p>
-                </div>
-
-                <div class="expertise-item" style="transform: translateY(220px);">
-                    <div class="icon-circle">
-                        <i class="fas fa-home text-white"></i>
-                    </div>
-                    <p>Real Estate</p>
-                </div>
-
-                <div class="expertise-item" style="transform: translate(-180px, 130px);">
-                    <div class="icon-circle">
-                        <i class="fas fa-hand-holding-usd text-white"></i>
-                    </div>
-                    <p>Private Wealth</p>
-                </div>
-
-                <div class="expertise-item" style="transform: translateX(-220px);">
-                    <div class="icon-circle">
-                        <i class="fas fa-gavel text-white"></i>
-                    </div>
-                    <p>Dispute Resolution</p>
-                </div>
-
-                <div class="expertise-item" style="transform: translate(-180px, -130px);">
-                    <div class="icon-circle">
-                        <i class="fas fa-file-contract text-white"></i>
-                    </div>
-                    <p>Commercial Contracts</p>
-                </div>
-            </div>
-
-        </div>
-    </section> -->
-
-
     <section class="pb-20 px-8" id="practice-areas">
         <div class="flex flex-col md:flex-row h-[500px] md:h-[400px] w-full max-w-7xl mx-auto overflow-hidden rounded-sm group">
             
@@ -394,6 +453,9 @@
                         <img src="https://plus.unsplash.com/premium_photo-1661397084763-7f70f7c10eea?q=80&w=1400&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="absolute inset-0 w-full h-full object-cover opacity-40">
                         <div class="absolute inset-0 bg-gradient-to-t from-[#344C64] via-[#344C64]/60 to-transparent z-10"></div>
                         
+                        <div class="absolute inset-0 bg-gradient-to-b from-[#344C64]/50 via-transparent to-[#344C64]"></div>
+            
+                        <div class="absolute inset-0 bg-[#344C64]/50"></div>
                         <div class="absolute inset-0 flex items-center justify-center z-20 px-8 md:px-24">
                             <div class="max-w-3xl text-center" data-aos="fade-up">
                                 
@@ -437,9 +499,6 @@
     </section>
 
 
-    
-
-
 
     <section class="py-32 px-8 border-t border-white/10">
         <div class="max-w-7xl mx-auto">
@@ -471,9 +530,13 @@
                             Exploring the new regulatory framework and its implications for multinational corporations operating in Indonesia.
                         </p>
                         
-                        <a href="detail-newsroom.html">
-                            <span class="inline-block text-white text-[10px] uppercase tracking-widest border-b border-white/20 pb-1 group-hover:border-white transition-all">Read More</span>
-                        </a>
+                        <div class="flex justify-end">
+                            <a href="detail-newsroom.html">
+                                <span class="inline-block text-[10px] uppercase tracking-widest border-b border-[#344C64] pb-1 group-hover:border-blue-400 transition-all">
+                                    Read More
+                                </span>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
@@ -492,9 +555,13 @@
                             Our firm is proud to contribute to the latest comprehensive guide on Indonesian Mergers and Acquisitions.
                         </p>
                         
-                        <a href="detail-newsroom.html">
-                            <span class="inline-block text-white text-[10px] uppercase tracking-widest border-b border-white/20 pb-1 group-hover:border-white transition-all">Read More</span>
-                        </a>
+                        <div class="flex justify-end">
+                            <a href="detail-newsroom.html">
+                                <span class="inline-block text-[10px] uppercase tracking-widest border-b border-[#344C64] pb-1 group-hover:border-blue-400 transition-all">
+                                    Read More
+                                </span>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
@@ -513,9 +580,13 @@
                             A detailed analysis of the simplified licensing process for foreign direct investment in the tech sector.
                         </p>
                         
-                        <a href="detail-newsroom.html">
-                            <span class="inline-block text-white text-[10px] uppercase tracking-widest border-b border-white/20 pb-1 group-hover:border-white transition-all">Read More</span>
-                        </a>
+                        <div class="flex justify-end">
+                            <a href="detail-newsroom.html">
+                                <span class="inline-block text-[10px] uppercase tracking-widest border-b border-[#344C64] pb-1 group-hover:border-blue-400 transition-all">
+                                    Read More
+                                </span>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
@@ -771,6 +842,20 @@
         
         // Inisialisasi Lucide Icons kembali
         lucide.createIcons();
+    </script>
+    <script>
+    function toggleDropdown(id) {
+        const dropdown = document.getElementById(id);
+        const icon = document.getElementById('icon-' + id);
+
+        if (dropdown.style.maxHeight) {
+            dropdown.style.maxHeight = null;
+            icon.classList.remove("rotate-180");
+        } else {
+            dropdown.style.maxHeight = dropdown.scrollHeight + "px";
+            icon.classList.add("rotate-180");
+        }
+    }
     </script>
 </body>
 </html>

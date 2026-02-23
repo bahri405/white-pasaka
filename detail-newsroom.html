@@ -11,11 +11,8 @@
     <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <style>
-       
-
-    </style>
-<body class="overflow-x-hidden">
+    <link rel="stylesheet" href="assets/css/style.css">
+<body class="overflow-x-hidden bg-white">
     
     <header class="relative h-[70vh] flex items-end overflow-hidden">
         <div class="absolute inset-0 z-0">
@@ -23,7 +20,9 @@
                 id="parallax-bg"
                 class="absolute top-0 left-0 w-full h-[120%] object-cover" 
                 alt="Header Background">
-            <div class="absolute inset-0 header-scrim"></div>
+                <div class="absolute inset-0 bg-gradient-to-b from-[#344C64]/50 via-transparent to-[#344C64]"></div>
+                <div class="absolute inset-0 bg-[#344C64]/20"></div>
+            <!-- <div class="absolute inset-0 header-scrim"></div> -->
         </div>
 
         <nav class="absolute top-0 w-full p-6 px-8 flex justify-between items-center z-50 transition-all duration-300">
@@ -82,12 +81,12 @@
     </header>
 
     
-    <section class="bg-black py-32 px-8">
+    <section class=" py-32 px-8">
         <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-20">
             
             <div class="lg:w-2/3" data-aos="fade-up">
                 <div class="flex items-center gap-4 mb-8 text-[10px] uppercase tracking-[0.3em] text-gray-500">
-                    <a href="newsroom.html" class="hover:text-white transition-colors">Newsroom</a>
+                    <a href="newsroom.html" class="hover:text-[#344C64] transition-colors">Newsroom</a>
                     <span>/</span>
                     <span class="text-blue-firm">Corporate Policy</span>
                     <span>/</span>
@@ -95,7 +94,7 @@
                 </div>
 
                 <article class="article-content">
-                    <h2 class="serif text-4xl md:text-5xl text-white mb-12 leading-tight">
+                    <h2 class="serif text-4xl md:text-5xl  mb-12 leading-tight">
                         Indonesia Eases Market Entry for FDI Companies under BKPM Regulation 5/2025
                     </h2>
 
@@ -105,14 +104,14 @@
                     <p>Under the previous regulation, there were significant hurdles for foreign investors regarding capital requirements.</p>
 
                     <div class="overflow-x-auto">
-                        <table class="custom-table">
+                        <table class="custom-table text-white">
                             <thead>
                                 <tr>
                                     <th>Previous Regulation</th>
                                     <th>BKPM Regulation 5/2025</th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody class="text-[#344C64]">
                                 <tr>
                                     <td>Investment value must exceed IDR 10 billion per project.</td>
                                     <td>The IDR 10 billion limit now applies to the total investment across multiple production lines.</td>
@@ -138,23 +137,24 @@
                         <h4 class="text-[10px] uppercase tracking-[0.5em] text-gray-500 mb-8">Related Experts</h4>
                         
                         <div class="group flex gap-6 mb-10 items-center">
-                            <div class="w-20 h-20 rounded-full overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-500 border border-white/10">
+                            <div class="w-24 h-24  overflow-hidden  group-hover:grayscale-0 transition-all duration-500 border border-white/10">
                                 <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=200" class="w-full h-full object-cover">
+                                
                             </div>
                             <div>
                                 <p class="text-[9px] uppercase tracking-widest text-gray-500 mb-1">Managing Partner</p>
-                                <h5 class="serif text-white italic text-lg">Rifdaan Novarazka</h5>
+                                <h5 class="serif  italic text-lg">Rifdaan Novarazka</h5>
                                 <a href="mailto:rifdaan@lawfirm.com" class="text-[10px] text-blue-firm hover:underline">Contact Expert —</a>
                             </div>
                         </div>
 
                         <div class="group flex gap-6 items-center">
-                            <div class="w-20 h-20 rounded-full overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-500 border border-white/10">
+                            <div class="w-24 h-24  overflow-hidden  group-hover:grayscale-0 transition-all duration-500 border border-white/10">
                                 <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=200" class="w-full h-full object-cover">
                             </div>
                             <div>
                                 <p class="text-[9px] uppercase tracking-widest text-gray-500 mb-1">Associate</p>
-                                <h5 class="serif text-white italic text-lg">Teresa Chiquita</h5>
+                                <h5 class="serif  italic text-lg">Teresa Chiquita</h5>
                                 <a href="mailto:teresa@lawfirm.com" class="text-[10px] text-blue-firm hover:underline">Contact Expert —</a>
                             </div>
                         </div>
@@ -163,7 +163,7 @@
                     <div class="pt-12 border-t border-gray-900">
                         <p class="text-[10px] uppercase tracking-widest text-gray-500 mb-4">Next Reading</p>
                         <a href="#" class="group">
-                            <h6 class="serif text-xl text-white italic group-hover:text-blue-firm transition-colors">Strategic Partnership in Indonesia’s New Capital (IKN)</h6>
+                            <h6 class="serif text-xl  italic group-hover:text-blue-firm transition-colors">Strategic Partnership in Indonesia’s New Capital (IKN)</h6>
                         </a>
                     </div>
 
@@ -174,7 +174,7 @@
     </section>
     
 
-    <section class="bg-black pb-24 px-8 border-t border-gray-900">
+    <section class=" pb-24 px-8 border-t border-gray-900">
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-20">
             <div class="order-2 md:order-1" data-aos="fade-up">
                 <form class="grid grid-cols-2 gap-6">
@@ -195,7 +195,7 @@
         </div>
     </section>
 
-    <footer class="bg-black py-20 px-8 border-t border-gray-900">
+    <footer class=" py-20 px-8 border-t border-gray-900">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-12">
             <div>
                 <h4 class="font-bold tracking-[0.3em] text-lg leading-tight uppercase">Pasaka<br>Rievan <br>Smit</h4>

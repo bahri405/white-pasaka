@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ishak Ricardo Pasaka | Professionals - PRS Law</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-white text-[#344C64]">
+
+      <nav class="absolute top-0 w-full p-6 px-8 flex justify-between items-center z-50 transition-all duration-300">
+            <a href="index.html" class="z-[60]">
+                <div class="text-2xl md:text-3xl font-extralight tracking-[0.2em] uppercase leading-tight text-white">
+                    <span class="font-extrabold">P</span>asaka<br> 
+                    <span class="font-extrabold">R</span>ievan<br> 
+                    <span class="font-extrabold">S</span>mith<br>
+                    <span class="block text-[10px] leading-none tracking-[0.3em] mt-1">
+                        Counsellors at <span class="font-semibold">Law</span>
+                    </span>
+                </div>
+            </a>
+            
+
+            <ul class="hidden md:flex space-x-10 text-[10px] uppercase tracking-[0.3em] font-light text-white">
+
+                <!-- The Firm -->
+                <li class="nav-link pb-1 cursor-pointer hover:text-gray-300 transition-colors">
+                    <a href="about-us.html" class="hover:text-gray-300 transition-colors">
+                        The Firm
+                    </a>
+                </li>
+
+                <!-- Professionals Dropdown -->
+                <li class="relative group ">
+                    <a href="profesionals.html" 
+                    class="flex items-center gap-2 hover:text-gray-300 transition-colors">
+                        Professionals
+                        <i data-lucide="chevron-down"
+                        class="w-3 h-3 transition-transform duration-300 group-hover:rotate-180">
+                        </i>
+                    </a>
+
+                    <div class="absolute left-0 top-full mt-4 w-40
+                                bg-white/10 backdrop-blur-xl
+                                border border-white/20
+                                shadow-2xl
+                                opacity-0 invisible
+                                group-hover:opacity-100 group-hover:visible
+                                transition-all duration-300">
+
+                        <div class="flex flex-col text-[11px] tracking-widest uppercase py-4 text-white">
+                            <a href="#" class="px-6 py-2 hover:bg-white/10 transition-colors">Partners</a>
+                            <a href="#" class="px-6 py-2 hover:bg-white/10 transition-colors">Counsels</a>
+                            <a href="#" class="px-6 py-2 hover:bg-white/10 transition-colors">Associates</a>
+                        </div>
+
+                    </div>
+                </li>
+
+                <!-- Area of Expertise Dropdown -->
+                <li class="relative group">
+                    <a href="practice-area.html" 
+                    class="flex items-center gap-2 hover:text-gray-300 transition-colors">
+                        Area of Expertise
+                        <i data-lucide="chevron-down"
+                        class="w-3 h-3 transition-transform duration-300 group-hover:rotate-180">
+                        </i>
+                    </a>
+
+                    <div class="absolute left-0 top-full mt-4 w-64
+                                bg-white/10 backdrop-blur-xl
+                                border border-white/20
+                                shadow-2xl 
+                                opacity-0 invisible
+                                group-hover:opacity-100 group-hover:visible
+                                transition-all duration-300">
+
+                        <div class="flex flex-col text-[11px] tracking-widest uppercase py-4 text-white">
+                            <a href="#" class="px-6 py-2 hover:bg-white/10 transition-colors">
+                                Banking & Finance
+                            </a>
+                            <a href="#" class="px-6 py-2 hover:bg-white/10 transition-colors">
+                                Capital Markets & Securities
+                            </a>
+                            <a href="#" class="px-6 py-2 hover:bg-white/10 transition-colors">
+                                Commercial Contracts
+                            </a>
+                            <a href="#" class="px-6 py-2 hover:bg-white/10 transition-colors">
+                                Private Wealth
+                            </a>
+                        </div>
+
+                    </div>
+                </li>
+
+                <li class="nav-link pb-1 cursor-pointer hover:text-gray-300 transition-colors">
+                    <a href="newsroom.html" class="hover:text-gray-300">Insights</a>
+                </li>
+                <li class="nav-link pb-1 cursor-pointer hover:text-gray-300 transition-colors">
+                    <a href="contact.html" class="hover:text-gray-300">Reach Us</a>
+                </li>
+                <li class="nav-link pb-1 cursor-pointer hover:text-gray-300 transition-colors">
+                    <a href="carrers.html" class="hover:text-gray-300">Join Us</a>
+                </li>
+                <div class="flex items-center pb-1 gap-2 text-white/60">
+                        <i data-lucide="globe" class="w-3 h-3 text-[#C9A24D]"></i>
+                        <div class="flex gap-2 text-[10px] font-bold tracking-widest">
+                            <button class="text-white hover:text-[#C9A24D] transition-colors" id="lang-en">EN</button>
+                            
+                        </div>
+                </div>
+            </ul>
+
+            <button id="menuBtn" class="md:hidden z-[60] flex flex-col justify-between h-5 w-6 outline-none">
+                <span class="block h-0.5 w-full bg-white transition-all duration-300 origin-left" id="line1"></span>
+                <span class="block h-0.5 w-full bg-white transition-all duration-300" id="line2"></span>
+                <span class="block h-0.5 w-full bg-white transition-all duration-300 origin-left" id="line3"></span>
+            </button>
+
+            <div id="mobileMenu" class="fixed inset-0 bg-[#344C64] z-[55] flex flex-col items-center justify-center translate-x-full transition-transform duration-500 ease-in-out">
+                <ul class="flex flex-col space-y-8 text-center text-sm uppercase tracking-[0.4em] font-light text-white">
+                    
+                    <a href="about-us.html" class="hover:text-gray-300 transition-colors">The Firm </a>
+                    <li class="w-full">
+                        <button onclick="toggleDropdown('mobileProf')" 
+                            class="w-full flex justify-between items-center py-3">
+                            <span>Professionals</span>
+                            <i data-lucide="chevron-down" 
+                            id="icon-mobileProf"
+                            class="w-4 h-4 transition-transform duration-300"></i>
+                        </button>
+
+                        <div id="mobileProf"
+                            class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out
+                                    bg-[#344C64]/60 backdrop-blur-xl
+                                    border border-white/10 rounded-md">
+
+                            <div class="flex flex-col text-[11px] tracking-widest uppercase py-4 text-white">
+                                <a href="#" class="px-6 py-2 hover:bg-white/10">Partners</a>
+                                <a href="#" class="px-6 py-2 hover:bg-white/10">Counsels</a>
+                                <a href="#" class="px-6 py-2 hover:bg-white/10">Associates</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="w-full">
+                        <button onclick="toggleDropdown('mobilePractice')" 
+                            class="w-full flex justify-between items-center py-3">
+                            <span>Area of Expertise</span>
+                            <i data-lucide="chevron-down" 
+                            id="icon-mobilePractice"
+                            class="w-4 h-4 transition-transform duration-300"></i>
+                        </button>
+
+                        <div id="mobilePractice"
+                            class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out
+                                    bg-[#344C64]/60 backdrop-blur-xl
+                                    border border-white/10 rounded-md">
+
+                            <div class="flex flex-col text-[11px] tracking-widest uppercase py-4 text-white">
+                                <a href="#" class="px-6 py-2 hover:bg-white/10">Banking & Finance</a>
+                                <a href="#" class="px-6 py-2 hover:bg-white/10">Capital Markets & Securities</a>
+                                <a href="#" class="px-6 py-2 hover:bg-white/10">Commercial Contracts</a>
+                                <a href="#" class="px-6 py-2 hover:bg-white/10">Private Wealth</a>
+                            </div>
+                        </div>
+                    </li>
+                    <a href="newsroom.html" class="hover:text-gray-300 transition-colors">Insights</a>
+                    <a href="#" class="hover:text-gray-300 transition-colors">Reach Us</a>
+                    <a href="#" class="hover:text-gray-300 transition-colors">Join us</a>
+                </ul>
+                
+                <div class="absolute bottom-12 flex space-x-6">
+                    <div class="h-[1px] w-8 bg-white/20 self-center"></div>
+                    <p class="text-[9px] text-gray-500 tracking-widest uppercase">PRS</p>
+                    <div class="h-[1px] w-8 bg-white/20 self-center"></div>
+                </div>
+            </div>
+        </nav>
+
+    <header class="relative h-[70vh] flex items-end overflow-hidden parallax">
+        
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1505547828843-176834e42154?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                id="parallax-bg"
+                class="absolute top-0 left-0 w-full h-[120%] object-cover will-change-transform" 
+                alt="Header Background">
+            <!-- <div class="absolute inset-0 header-scrim"></div> -->
+            <div class="absolute inset-0 bg-gradient-to-b from-white/10 via-transparent to-[#344C64]"></div>
+            <div class="absolute inset-0 bg-[#344C64]/40"></div>
+        </div>
+
+        <div class="relative z-10 w-full max-w-7xl mx-auto px-8 pb-12">
+            <div class="flex flex-col md:flex-row md:items-end justify-between items-start gap-6">
+                
+                <div class="md:w-1/2" data-aos="fade-up">
+                    <h1 class="text-4xl md:text-6xl serif italic tracking-tight text-white leading-none">
+                        The Patners
+                    </h1>
+                </div>
+
+                <div class="md:w-1/3 mb-2" data-aos="fade-up" data-aos-delay="200">
+                    <p class="text-gray-300 italic text-sm md:text-base font-light leading-relaxed border-l border-white/20 pl-6">
+                        "Our team of legal experts brings a wealth of experience and specialized knowledge across multiple practice areas."
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="absolute bottom-0 left-0 w-full h-[1px] bg-white/10"></div>
+    </header>
+
+    <section class="relative z-20 -mt-16 max-w-[1400px] mx-auto px-8 md:px-16">
+        <div class="grid lg:grid-cols-12 gap-16">
+            <div class="lg:col-span-5 reveal" style="transition-delay: 0.3s;">
+                </div>
+            
+            <div class="lg:col-span-7 pt-24 reveal" style="transition-delay: 0.4s;">
+                </div>
+        </div>
+    </section>
+
+    <main class="pt-48 pb-32 bg-[#FBFBFB]">
+        <div class="max-w-[1400px] mx-auto px-8 md:px-16">
+            
+            <div class="relative mb-32">
+                <div class="grid lg:grid-cols-12 items-end">
+                    <div class="lg:col-span-8 z-10">
+                        <span class="text-gray-400 uppercase tracking-[0.6em] text-[10px] font-bold mb-6 block reveal">Managing Partner</span>
+                        <h1 class="serif-heading text-6xl md:text-[100px] leading-[0.9] text-[#344C64] reveal">
+                            Ishak Ricardo <br>
+                            <span class="italic font-light text-gray-300 pl-0 md:pl-32">Pasaka.</span>
+                        </h1>
+                    </div>
+                    <div class="lg:col-span-4 reveal pt-12 lg:pt-0" style="transition-delay: 0.2s;">
+                        <div class="border-l border-gray-200 pl-8 space-y-6">
+                            <p class="serif-body text-sm text-gray-500 leading-relaxed italic">
+                                "Legal excellence is not just about knowing the law, but navigating its complexities with strategic foresight."
+                            </p>
+                            <div class="flex gap-4">
+                                <a href="#" class="text-[#344C64] hover:text-gray-400 transition-colors"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
+                                <a href="#" class="text-[#344C64] hover:text-gray-400 transition-colors"><i data-lucide="mail" class="w-4 h-4"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid lg:grid-cols-12 gap-16 lg:gap-24">
+                
+                <div class="lg:col-span-5 reveal">
+                    <div class="sticky top-32 space-y-8">
+                        <div class="aspect-[4/5] overflow-hidden ">
+                            <img src="https://pasakarievansmith.com/uploads/professionals/team-20260211073449.png" 
+                                alt="Professional Profile" class="w-full h-full object-cover">
+                        </div>
+                        <div class="grid grid-cols-2 gap-8 pt-4">
+                            <div>
+                                <h4 class="text-[9px] uppercase tracking-widest font-bold text-gray-400 mb-2">Qualifications</h4>
+                                <p class="text-[11px] text-[#344C64] leading-relaxed tracking-wider uppercase">S.H., LL.M.</p>
+                            </div>
+                            <div>
+                                <h4 class="text-[9px] uppercase tracking-widest font-bold text-gray-400 mb-2">Focus</h4>
+                                <p class="text-[11px] text-[#344C64] leading-relaxed tracking-wider uppercase">Corporate / Dispute</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 space-y-24 reveal" style="transition-delay: 0.3s;">
+                    
+                    <section class="space-y-8">
+                        <h3 class="text-[10px] uppercase tracking-[0.4em] font-bold text-gray-300">The Profile</h3>
+                        <div class="serif-body text-xl md:text-2xl text-[#344C64] leading-relaxed font-light">
+                            <p class="mb-8">
+                                Ishak Ricardo Pasaka is a distinguished legal practitioner known for his <span class="italic">intellectual rigor</span> and strategic approach to complex cross-border transactions.
+                            </p>
+                            <p class="text-lg text-gray-500 font-normal">
+                                As the Managing Partner of PRS, he leads the firm's strategic direction, focusing on high-stakes corporate advisory and international arbitration. His tenure in the legal industry has been defined by a commitment to delivering clarity where others find ambiguity.
+                            </p>
+                        </div>
+                    </section>
+
+                    <section class="grid md:grid-cols-2 gap-16 pt-16 border-t border-gray-100">
+                        <div class="space-y-8">
+                            <h3 class="text-[10px] uppercase tracking-[0.4em] font-bold text-gray-300">Academic Background</h3>
+                            <div class="space-y-8">
+                                <div>
+                                    <p class="text-sm font-bold tracking-tight mb-1">University of London</p>
+                                    <p class="text-xs text-gray-400 italic">Master of Laws (LL.M.) in International Business Law</p>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-bold tracking-tight mb-1">Universitas Indonesia</p>
+                                    <p class="text-xs text-gray-400 italic">Bachelor of Laws (S.H.)</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="space-y-8">
+                            <h3 class="text-[10px] uppercase tracking-[0.4em] font-bold text-gray-300">Associations</h3>
+                            <div class="space-y-4">
+                                <p class="text-xs text-gray-500 leading-relaxed uppercase tracking-widest border-l-2 border-gray-100 pl-4">Indonesian Bar Association (PERADI)</p>
+                                <p class="text-xs text-gray-500 leading-relaxed uppercase tracking-widest border-l-2 border-gray-100 pl-4">Certified Capital Market Legal Consultant</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <div class="pt-12">
+                        <a href="mailto:pasaka@prslaw.com" class="group flex items-center gap-6 text-[11px] uppercase tracking-[0.4em] font-bold">
+                            Download Detailed Resume
+                            <span class="w-12 h-[1px] bg-[#344C64] group-hover:w-24 transition-all duration-700"></span>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        lucide.createIcons();
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
